@@ -1,21 +1,26 @@
 pipeline {
-  agent any 
+  agent any
+  environment {
+    myenv1="dev"
+  }
+  parameters {
+  string defaultValue: 'dev', description: 'dev environment', name: 'Environment', trim: false
+  choice choices: ['linux', 'hp-ux', 'solaris'], description: '', name: 'ostype'
+}
+
   stages {
-    stage('working with switch statement') {
+    stage('working with variables') {
       steps {
-      script {
-        def myval1 = input message: 'enter val1 value', parameters: [string(defaultValue: '20', description: '', name: 'val1', trim: false)]
-        switch(myval1.toInteger()) {
-          case 1:
-            println "I am 1"
-            break
-          case 2:
-            println "I am 2"
-			break
-          default:
-            println "Print either 1 or 2"
+        script {
+          def myval1=20
+          println "myval1 value is ${myval1}"
+          println "myenv1 environment is ${env.myenv1}"
+          //printing global variables
+          println "Printing build id ${env.BUILD_ID}"
+          // printing parameters values
+          println "my environment parameter is ${params.Environment}"
+          println "my selected ostype is ${params.ostype}"
         }
-      }
       }
     }
   }
