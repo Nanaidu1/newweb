@@ -1,7 +1,7 @@
 def fun1(){
   println"1st" 
 }
-def fun2(int a=10, int=20){
+def fun2(int a, int b){
 
   println"${a+b}" 
 }
@@ -12,7 +12,7 @@ pipeline {
       steps {
       script {
         fun1()
-        fun2()
+        fun2(10,20)
         }
       }
       }
