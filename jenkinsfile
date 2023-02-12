@@ -5,10 +5,9 @@ pipeline {
       steps {
       script {
         def myval = 10
-        while(myval > 0)
+        for (i=0;i<=5;i++)
         {
-          println myval
-          myval -= 1
+          println "${i}"
         }
         }
       }
