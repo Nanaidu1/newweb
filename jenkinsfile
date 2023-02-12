@@ -17,7 +17,7 @@ pipeline {
       }
       }
     }
-  stages {
+  
     stage('working with switch statemetn') {
       steps {
       script {
@@ -28,5 +28,5 @@ pipeline {
         }
       }
       }
-    }
+    
   }
