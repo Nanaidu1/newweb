@@ -1,5 +1,5 @@
 def fun1()
-def fun2
+def fun2()
 pipeline {
   agent any 
   stages {
