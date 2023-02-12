@@ -12,6 +12,16 @@ pipeline {
       steps {
       script {
         fun1()
+
+        }
+      }
+      }
+    }
+  stages {
+    stage('working with switch statemetn') {
+      steps {
+      script {
+        fun1()
         fun2(10,20)
         fun2()
         fun2(b=100,a=2000)
