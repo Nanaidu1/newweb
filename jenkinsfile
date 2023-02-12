@@ -1,14 +1,13 @@
+def fun1()
+def fun2
 pipeline {
   agent any 
   stages {
     stage('working with switch statemetn') {
       steps {
       script {
-        def myval = 10
-        for (i=0;i<=5;i++)
-        {
-          println "${i}"
-        }
+        fun1()
+        fun2()
         }
       }
       }
