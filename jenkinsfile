@@ -1,31 +1,17 @@
-def fun1(){
-  println"1st" 
-}
-def fun2(int a=40, int b=30){
-
-  println"${a+b}" 
-}
 pipeline {
   agent any 
   stages {
-    stage('working with switch statemetn') {
+    stage('working with files') {
       steps {
-      script {
-        fun1()
-
+        script {
+          File file = new File("/tmp/test.txt")
+          def lines = file.readLines()
+          println "Lines\n ${lines}"
+          for(line in lines)
+          {
+            println line
+          }
         }
-      }
-    }
-  
-    stage('working with switch statemetn') {
-      steps {
-      script {
-        fun1()
-        fun2(10,20)
-        fun2()
-        fun2(b=100,a=2000)
-        }
-      }
       }
     }
   }
