@@ -14,7 +14,7 @@ pipeline {
         fun1()
         fun2(10,20)
         fun2()
-        fun2(100,200)
+        fun2(b-100,a=2000)
         }
       }
       }
