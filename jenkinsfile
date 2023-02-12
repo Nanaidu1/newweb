@@ -1,5 +1,9 @@
-def fun1()
-def fun2()
+def fun1(){
+  println"1st" 
+}
+def fun2(){
+  println"2st" 
+}
 pipeline {
   agent any 
   stages {
