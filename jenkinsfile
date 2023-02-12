@@ -1,8 +1,9 @@
 def fun1(){
   println"1st" 
 }
-def fun2(){
-  println"2st" 
+def fun2(int a=10, int=20){
+
+  println"${a+b}" 
 }
 pipeline {
   agent any 
